@@ -90,12 +90,53 @@
 </nav>
 
         <div id="main" >
-            <div class ="post_page_title_img" style="height: 25rem;background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://p0hjtv5zp.bkt.clouddn.com/17137645946_8af8887119_o.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
                 <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >jsp</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                
+                <h3 id="JSP语法"><a href="#JSP语法" class="headerlink" title="JSP语法"></a>JSP语法</h3><p>一个页面由HTML页面内容，JSP注释，JSP指令，JSP脚本元素和JSP动作元素组成。</p>
+<h3 id="JSP声明"><a href="#JSP声明" class="headerlink" title="JSP声明"></a>JSP声明</h3><p>JSP在”&lt;%!”和”%&gt;”标记符之间声明变量和方法。在”&lt;%!”和”%&gt;”标记符之间声明变量，即在”&lt;%!”和”%&gt;”之间声明JAVA的变量声明语句。JAVA语音允许的任何数据类型变量都可以是JSP变量，通常将这些变量称为JSP页面的<strong>成员变量</strong>。如：</p>
+<blockquote>
+<pre><code>&lt;% int al, t=100, d;String jack=null,kissy= &quot; I love you&quot;;%&gt;
+</code></pre></blockquote>
+<p>“&lt;%!”和”%&gt;”之间声明的变量在整个JSp页面都有效。当多个客户请求一个JSP页面时，JSP引擎会为每一个客户启动一个线程。这些线程由JSP引擎服务器管理，切共享JSP页面的成员变量，因此每个用户对JSP页面的成员变量的操作都会影响其他用户。</p>
+<h3 id="JSP表达式"><a href="#JSP表达式" class="headerlink" title="JSP表达式"></a>JSP表达式</h3><p>可以在”&lt;%=”和”%&gt;”间插入表达式，该表达式必须<strong>能求值</strong>。表达式的值有服务器负责计算，并将计算结果用字符串的形式返回客户端。</p>
+<blockquote>
+<p>   Example01.jsp<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page contentType=&quot;text/html;charset=GB2312&quot; %&gt;</span><br><span class="line">&lt;HTML&gt;</span><br><span class="line">&lt;BODY bgcolor= E6E6FA&gt; &lt;FONT size=3&gt;</span><br><span class="line">&lt;p&gt;13的平方等于:</span><br><span class="line">&lt;%=MATh.pow(13,2)%&gt;</span><br><span class="line">&lt;p&gt;7658乘以67等于:</span><br><span class="line">&lt;%=7658*67&gt;</span><br><span class="line">&lt;/BODY&gt;</span><br><span class="line">&lt;/HTML&gt;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="JSP注释"><a href="#JSP注释" class="headerlink" title="JSP注释"></a>JSP注释</h3><p>JSP中的注释包括HTML注释和JSP注释两种。其中，HTML注释是可以在<strong>客户端</strong>显示的注释；JSP注释是发送到<strong>服务器端</strong>，在客户端不能被显示的注释。<br>(1)HTML注释是以<!--开始，以-->结束，中间为注释部分。其语法格式如下。</p>
+<blockquote>
+<pre><code>&lt;!--注释内容--&gt;
+</code></pre></blockquote>
+<p>(2)JSP注释是以&lt;%–开始，–&gt;结束，中间为注释内容，语法格式如下。</p>
+<blockquote>
+<pre><code>&lt;%--注释内容--%&gt;
+</code></pre></blockquote>
+<h3 id="JSP指令"><a href="#JSP指令" class="headerlink" title="JSP指令"></a>JSP指令</h3><p>JSp指令向<strong>JSP引擎提供编译信息</strong>。JSP指令可以设置全局变量，如声明类、要实现的方法和输出内容的类型等。通常JSP指令在整个页面范围内均有效，且不向客户端产生任何输出。所有的JSP指令都只在当前页面有效。其语法格式如下：</p>
+<blockquote>
+<pre><code>&lt;%@指令标记 [属性1=&quot;值1&quot;属性2=&quot;值2&quot;]%&gt;
+</code></pre></blockquote>
+<p>JSP指令包括include指令、page指令和taglib指令这三类指令。</p>
+<ol>
+<li><p>1.include指令<br>include指令只有一个<strong>file属性</strong>，用来指定插入到JSP页面目前位置的文件资源。插入文件的路径，一般使用相对路径。</p>
+<blockquote>
+<p>Example02.jsp</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page contentType=&quot;text/html;charset=GB2312&quot;%&gt;</span><br><span class="line">&lt;HTML&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;title&gt;使用include指令插入一个文本文件示例&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;BODY bgcolor= #FOF8FF&gt;</span><br><span class="line">&lt;H3&gt;</span><br><span class="line">&lt;%@ include file = &quot;HELLO.txt&quot; %&gt;</span><br><span class="line">&lt;/H3&gt;</span><br><span class="line">&lt;/HTML&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>2.page指令<br>page指令用来定义JSP页面的<strong>全局属性</strong>，即用来指定所使用的脚本语言、导入指定的类及软件包等，会作用于整个JSP页面。<br>例如：在前面JSP代码中使用的&lt;%@ page contentType=”text/html;charset=GB2312”%&gt;<br>就是使用page指令定义JSP页面的contentType属性的植是”text/html;charset=GB2312”。这样，页面就可以显示标准汉语。        page指令语法格式如下：</p>
+</li>
+</ol>
+<blockquote>
+<pre><code>&lt;% page 属性1=&quot;属性值1&quot;属性2=&quot;属性值2&quot;...%&gt;
+</code></pre></blockquote>
+<p>属性值总是用双引号括起来，例如：</p>
+<blockquote>
+<pre><code>&lt;%@ page contentType=&quot;text/html;charset=GB2312&quot; import=&quot;java.util.*&quot;%&gt;
+</code></pre></blockquote>
+<p>Tips：在一个JSP页面中，也可以使用多个page指令来指定属性及其值。需要注意的是，可以使用多个page指令给属性import指定几个值，但其他属性只能使用一次page指令指定该属性一个值。</p>
+
             </div>
 
             <!-- Post Comments -->
