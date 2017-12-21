@@ -136,6 +136,13 @@
 <pre><code>&lt;%@ page contentType=&quot;text/html;charset=GB2312&quot; import=&quot;java.util.*&quot;%&gt;
 </code></pre></blockquote>
 <p>Tips：在一个JSP页面中，也可以使用多个page指令来指定属性及其值。需要注意的是，可以使用多个page指令给属性import指定几个值，但其他属性只能使用一次page指令指定该属性一个值。</p>
+<p>page指令共有13个属性，下面介绍它们的含义。</p>
+<ul>
+<li><p>contentType：指定JSP页面的编码方式和JSP页面响应时间的MIME类型，默认的为TEXThtml，默认的字符集类型为charset=ISO-8859-1.</p>
+<pre><code>MIME(Multipurpose Internet Mail Extensions)是指多用途互联网邮件扩展类型，用来设置某种扩展名的文件用何种应用程序来打开的方式类型。ored
+</code></pre></li>
+<li>language:声明所使用的脚本语言的种类。<br>pageEncoding:指定页面编码格式。<br>isELIgnored：指定JSP文件是否支持El表达式。EL(Expression Language)目的是使JSP写起来更加简单。</li>
+</ul>
 
             </div>
 
